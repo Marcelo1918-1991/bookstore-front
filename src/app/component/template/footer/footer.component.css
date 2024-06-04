@@ -1,7 +1,21 @@
 .footer {
-    position:fixed;
-    bottom: 0;
-    justify-content: flex-end;
-    font-size: 1rem;
-    height: 5%;
+  position: fixed;
+  bottom: 0; /* Fixar no fundo da página */
+  width: 100%; /* Garantir que o footer ocupe toda a largura da página */
+  display: flex;
+  justify-content: flex-end; /* Centralizar horizontalmente */
+  align-items: center; /* Centralizar verticalmente */
+  height: 5%;
+  background-color: rgb(72, 101, 123);
+  font-size: large;
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tuf {
+  margin-right: 16px; /* Espaçamento entre a imagem e o texto */
+}
+
+.tuf img {
+  height: 40px; /* Ajuste a altura da imagem conforme necessário */
 }

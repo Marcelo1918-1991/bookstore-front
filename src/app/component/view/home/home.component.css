@@ -1,6 +1,11 @@
 .home {
     width: 95%;
     margin: 1rem auto;
+    /* background-color: rgb(24, 30, 35); */
+}
+
+.title {
+    color:rgb(72, 101, 123);
 }
 
 @media(max-width: 450px) {
