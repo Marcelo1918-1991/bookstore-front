@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoriaService } from 'src/app/component/views/categorias/categoria.service';
+import { CategoriaService } from 'src/app/component/view/categorias/categoria.service';
 import { Categoria } from '../categoria.model';
 
 @Component({
@@ -9,7 +9,7 @@ import { Categoria } from '../categoria.model';
 })
 export class CategoriaListarComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
   categorias: Categoria[] = [];
 
   constructor(private service: CategoriaService) { }
