@@ -33,7 +33,6 @@ export class CategoriaListarComponent implements OnInit {
 
   navegarParaCategoriaCreate() {
     this.router.navigate(["categorias/create"])
-    console.log('teste')
   }
 
 }

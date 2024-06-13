@@ -1,0 +1,47 @@
+form {
+    text-align: center;
+    width: 70%;
+    margin: 2rem auto 0 auto;
+}
+
+/* h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: rgb(72, 101, 123);
+} */
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    color: rgb(72, 101, 123);
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative; /* Necessário para o pseudo-elemento abaixo */
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 50%; /* Ajuste a largura conforme necessário */
+    height: 2px; /* Ajuste a espessura da linha conforme necessário */
+    background-color: rgb(72, 101, 123); /* Cor da linha */
+    margin: 0.5rem auto 0; /* Espaçamento em cima da linha */
+}
+
+
+
+.form {
+    width: 100%;
+}
+
+.buttons {
+    width: 100%;
+    text-align: start;
+}
+
+button {
+    margin-right: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
