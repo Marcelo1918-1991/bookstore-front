@@ -40,7 +40,7 @@ export class CategoriaUpdateComponent implements OnInit {
       this.router.navigate(['categorias'])
       this.categoriaService.mensagem('Categoria atualizada com sucesso!')
     }, erro => {
-      console.log(erro)
+      this.categoriaService.mensagem('validar se todos os campos estão preenchidos com no mínimo 3 caractéres!')
     });
   }
 
