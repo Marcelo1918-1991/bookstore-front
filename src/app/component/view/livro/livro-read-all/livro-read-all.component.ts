@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Livro } from './livro.model';
 import { LivroService } from '../livro.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-livro-read-all',
@@ -13,6 +13,7 @@ export class LivroReadAllComponent implements OnInit {
   constructor(
     private livroService: LivroService,
     private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   displayedColumns: string[] = ['id', 'titulo', 'livros', 'acoes'];
@@ -29,8 +30,12 @@ export class LivroReadAllComponent implements OnInit {
   findAll() {
     this.livroService.findAllByCategoria(this.id_cat).subscribe((resposta) => {
       this.livros = resposta
-      console.log(this.livros)
+      console.log('oi')
     })
+  }
+
+  navegarParaCriarLivro() {
+    this.router.navigate([`categorias/${this.id_cat}/livros/create`])
   }
 
 }
