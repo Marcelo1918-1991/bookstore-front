@@ -30,7 +30,6 @@ export class LivroReadAllComponent implements OnInit {
   findAll() {
     this.livroService.findAllByCategoria(this.id_cat).subscribe((resposta) => {
       this.livros = resposta
-      console.log('oi')
     })
   }
 

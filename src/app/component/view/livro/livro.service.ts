@@ -27,7 +27,6 @@ export class LivroService {
     return this.http.get<Livro>(url)
   }
 
-  
   update(livro: Livro):Observable<Livro> {
     const url = `${this.baseUrl}/livros/${livro.id}`
     return this.http.put<Livro>(url, livro)
@@ -36,6 +35,11 @@ export class LivroService {
   create (livro: Livro, id_cat: String): Observable<Livro>{
     const url = `${this.baseUrl}/livros?categoria=${id_cat}`
     return this.http.post<Livro>(url, livro)
+  }
+
+  delete (id: String): Observable<void>{
+    const url = `${this.baseUrl}/livros/${id}`
+    return this.http.delete<void>(url)
   }
 
   mensagem(string: String) {
